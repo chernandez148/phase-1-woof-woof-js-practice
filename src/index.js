@@ -42,11 +42,11 @@ pupsDisplay = (pups) => {
         isGoodDog: !pups.isGoodDog,
       }),
       headers: {
-        "Content-type": "application/json; charset=UTF-8",
+        "Content-type": "application/json",
       },
     })
       .then((response) => response.json())
-      .then((json) => pupsDisplay(json));
+      .then((pupData) => pupsDisplay(pupData));
   });
 
   dogInfo.append(pupImg, pupName, pupBtn);
